@@ -1,9 +1,10 @@
-@extends('layouts.dashboard')
+@extends('layouts.index')
 @section('page-title')
 Dashboard
 @endsection
 @section('page-content')
 <div class="content-wrapper">
+
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
