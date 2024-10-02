@@ -15,6 +15,7 @@ class UserSeeder extends Seeder {
             'name' => 'Ahmed Atef',
             'email' => 'ahmed@gmail.com',
             'phone'=>'01026556692',
+            'image'=>fake()->imageUrl(),
             'password' => bcrypt( '123456' ),
         ] );
 

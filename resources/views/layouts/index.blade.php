@@ -28,18 +28,49 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         @include('layouts.left-sidebar')
 
-        @yield('page-content')
+        <div class="content-wrapper">
+
+            <div class="content-header">
+
+                <div class="container-fluid">
+                    <div class="row mb-2">
+
+                        <div class="col-sm-6">
+                            <h1 class="m-0">@yield('content-title')</h1>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                @section('breadcrumbs')
+                                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
+                                @show
+                            </ol>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="content">
+                <div class="container-fluid">
+                    @yield('page-content')
+                </div>
+            </div>
+
+        </div>
 
         @include('layouts.right-sidebar')
 
         @include('layouts.footer')
+    </div>
 
-        <!-- jQuery -->
-        <script src="{{ asset('plugins/jquery/jquery.min.js')}}"></script>
-        <!-- Bootstrap 4 -->
-        <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-        <!-- AdminLTE App -->
-        <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
+    <!-- jQuery -->
+    <script src="{{ asset('plugins/jquery/jquery.min.js')}}"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <!-- AdminLTE App -->
+    <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
 </body>
 
 </html>
